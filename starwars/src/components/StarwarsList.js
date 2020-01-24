@@ -11,7 +11,7 @@ export default function StarwarsList(props) {
         axios
             .get(url)
             .then(response => {
-                console.log(response.data)
+                console.log(response.results)
                 const characters = response.data.results;
                 setState(characters)
             })
@@ -20,13 +20,15 @@ export default function StarwarsList(props) {
 
     return (
         <div>
-            <p>List of Characters</p>
+            <p>Star Wars Characters</p>
             {state.map(character => {
                 return <StarwarsCard
                 key={character.results}
                 name={character.name}
                 height={character.height}
                 gender={character.gender}
+                birth={character.birth_year}
+                
                 />
             })}
 
@@ -35,10 +37,3 @@ export default function StarwarsList(props) {
     )
 }
 
-// {state.map(character => {
-//     return <StarwarsCard
-//     key={character.results}
-//     name={character.name}
-//     height={character.height}
-//     />
-// })}
