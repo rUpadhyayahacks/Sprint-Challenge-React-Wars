@@ -3,7 +3,7 @@ import 'semantic-ui-css/semantic.min.css'
 import { Card, Icon } from 'semantic-ui-react'
 
 export default function StarwarsCard(props) {
-    const {name, height, gender} = props;
+    const {name, height, birth, gender} = props;
 
     console.log(props)
     return (
@@ -13,6 +13,9 @@ export default function StarwarsCard(props) {
       <Card.Header>{name}</Card.Header>
       <Card.Meta>
         <span className='date'>Height: {height}</span>
+      </Card.Meta>
+      <Card.Meta>
+        <span className='date'>Birth Year: {birth}</span>
       </Card.Meta>
       
     </Card.Content>

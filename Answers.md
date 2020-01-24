@@ -2,7 +2,7 @@
 
 1. What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-A library/frameworl that allows people deploy style changes to the system.
+A library/framework that allows people deploy style changes to the system.
 
 1. What does it mean to think in react?
 
